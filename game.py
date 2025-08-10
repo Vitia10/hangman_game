@@ -1,5 +1,5 @@
 from main import my_list
-from test import SM
+from stickman import SM
 
 
 
