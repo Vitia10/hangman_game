@@ -56,19 +56,23 @@ class Brain():
               f'  |    {l1}{b}{r1}\n'
               f'  |    {l2} {r2}\n'
               f'__|__ \n')    
-
-         
-
-
     
 b = Brain()
 b.board()
+b.wrong_count
+b.tx
+b.result
+print(b.tx)
 while True:
-
     play_inp = input('plese add latter: ')
     print(b.player_quest(play_inp))
     b.board()
-    
+    if b.wrong_count > 6:
+        print('You lost.Try again!')
+        break 
+    elif b.tx == b.result:
+        print('Congratulation, you win!!!')
+        break
     
     
 
